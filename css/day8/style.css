@@ -1,0 +1,70 @@
+.container {
+background-color: lightblue;
+display: grid;
+grid-template-rows: 100px 100px 100px; /* 3 rows */
+grid-template-columns: 200px 200px 200px; /* 3 columns */
+border: 2px solid black;
+}
+
+.item{
+    background-color: lightcoral;
+    border: 1px solid black;
+}
+
+.container2 {
+    background-color: lightgreen;
+    display: grid;
+    grid-template-rows:auto auto; /* 2 rows */
+    grid-template-columns: auto auto auto; /* 2 columns */
+    border: 2px solid black;
+}
+
+._2{
+    background-color: lightyellow;
+    border: 1px solid black;
+}
+
+.item-1-1{
+    background-color: lightpink;
+    border: 1px solid black;
+}
+
+.container3 {
+    height: 300px;
+    width: 300px;
+    background-color: lightgray;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr; /* 2 rows */
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    border: 2px solid black;
+}
+
+._3{
+    background-color: rgb(32, 178, 93);
+    border: 1px solid black;
+}
+
+.container4{
+    background-color: rgb(231, 185, 98);
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    
+}
+
+
+.container4 > .item-1{
+    background-color: rgb(32, 178, 93);
+    border: 1px solid black;
+    height:50px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

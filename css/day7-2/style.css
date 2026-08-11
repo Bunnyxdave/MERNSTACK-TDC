@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 40px;
+}
+
+.container {
+    width: 600px;
+   
+    border: 2px solid #333;
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+   /* align-content: flex-start;  All rows packed at top */
+    /*align-content: flex-end;  All rows packed at bottom */
+    /*align-content: center;  All rows grouped in center */
+    /*align-content: space-between;  First row at top, last at bottom, even spacing */
+    /*align-content: space-around;  Equal space around each row */
+    /*align-content: stretch; Rows stretch to fill space (default) */
+}
+
+.container div {
+    width: 180px;
+    height: 100px;
+    margin: 15px;
+    
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container div:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+    
+}
+
+.red-card {
+    background: #e53935;
+}
+
+.orange-card {
+    background: #fb8c00;
+}
+
+.yellow-card {
+    background: #fdd835;
+    color: #333;
+}
+
+.green-card {
+    background: #43a047;
+}
+
+.blue-card {
+    background: #1e88e5;
+}
+
+.indigo-card {
+    background: #3949ab;
+}
+
+.violet-card {
+    background: #8e24aa;
+    align-self:center;
+}
+
+.container1{
+   display: flex;
+align-items: center; /* All items centered */
+height: 300px;
+    
+}
+
+.item {
+width: 100px;
+height: 100px;
+}
+
+
+
+
+.item-special {
+align-self: flex-start; /* This one goes to top */
+background: gold;
+}
