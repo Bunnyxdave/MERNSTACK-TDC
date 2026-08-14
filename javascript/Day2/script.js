@@ -123,7 +123,6 @@
 //LENGTH 
 // let userId="ashiqbanayaaaapne"
 // console.log(userId.length) //17
-
 // let child="my name is \nbeingshark"
 // console.log(child.length)
 
@@ -136,3 +135,179 @@
 // console.log(text.toLowerCase()) //hello world
 // //replace
 // console.log(text.replace("world", "javascript")) //hello javascript
+
+//ESCAPE SEQUENCES
+//console.log("this is first line\n this is second line") for next line
+//console.log("Name:\tAlice")  for space
+
+
+
+//STRING INDEXING
+//JavaScript uses 0-based indexing for strings.
+// Accessing Characters
+// Use square brackets [] with the index number:
+
+// let studentName="ashutosh";
+// 'a'-0
+// 's'-1
+// 'h'-2
+// 'u'-3
+// 't'-4
+// 'o'-5
+// 's'-5
+// 'h'-6
+// console.log(studentName[3]); // u
+
+// let city = "London";
+// console.log(city[0]); // "L" - first character
+// console.log(city[1]); // "o" - second character
+// console.log(city[2]); // "n" - third character
+// console.log(city[3]); // "d" - fourth character
+// console.log(city[4]); // "o" - fifth character
+// console.log(city[5]); // "n" - sixth (last) character
+
+// let disco ="badshah"
+// let first =disco[4]
+
+// console.log(first)
+
+// let disco ="badshah"
+// let last =disco[disco.length-1]
+
+// console.log(last)
+// VM6226:4 h
+//NOTE:Accessing an index that doesn't exist returns undefined
+
+//SOME OF THE PRACTICAL EXAMPLES BASED ON THE STRING INDEXING
+
+// let firstName="mohammed"
+// let lastName="burhanuddin"
+
+// let fullName=`Hi! my name is ${firstName} ${lastName}`
+// console.log(fullName)
+
+
+//Important Notes
+// 1. Strings are Immutable: You cannot change individual characters
+
+
+//STRING CONCATENATION
+//// Joining two strings
+// let firstName = "Alice";
+// let lastName = "Smith";
+// let fullName = firstName + lastName;
+// console.log(fullName); // "AliceSmith"
+
+// Number + String = String
+// let score = 100;
+// let message1 = "Your score is: " + score;
+// console.log(message1); // "Your score is: 100"
+// console.log(typeof message1); // "string"
+// // String + Number = String
+// let message2 = "Player " + 1;
+// console.log(message2); // "Player 1"
+// // Multiple numbers and strings
+// let age = 25;
+// let message3 = "I am " + age + " years old";
+// console.log(message3); // "I am 25 years old"
+
+
+//aADDING NUMBER AND STRING USING +
+// console.log(10+"20" )//whole data is treated as string
+
+//CONCATENATION VS TEMPLATE LITERALS
+// Concatenation (hard to read)
+// let name = "Alice";
+// let age = 25;
+// let city = "New York";
+// let message = "My name is " + name + ", I am " + age + " years old, and I live in " + city + ".";
+// // Template Literal (easier to read) - We'll cover this next!
+// let betterMessage = `My name is ${name}, I am ${age} years old, and I live in ${city}.`;
+
+
+
+//CONSOLE.LOG
+// let product= "Laptop";
+// let price="277"
+
+// console.log("product:", product);
+// console.log("price:", price)
+
+
+
+//COMAPRASION OPERATORS
+// Comparison operators are used to compare two values and return a boolean result ( true or false ). They're
+// essential for making decisions in your code.
+
+//1. GREATER THAN >
+// console.log(10 > 5); // true
+// console.log(5 > 10); // false
+// console.log(5 > 5); // false (not greater, just equal)
+// let age = 20;
+// console.log(age > 18); // true
+
+//2. LESS THAN <
+// console.log(5 < 10); // true
+// console.log(10 < 5); // false
+// console.log(5 < 5); // false
+// let score = 45;
+// console.log(score < 50); // true
+
+//3. GREATER THAN EQUALTO >=
+//console.log(10 >= 5); // true (10 is greater)
+// console.log(5 >= 10); // false
+// console.log(5 >= 5); // true (equal counts!)
+// let age = 18;
+// console.log(age >= 18); // true (can vote)
+
+//4.LESSER THAN EQUALTO <=
+// console.log(5 <= 10); // true
+// console.log(10 <= 5); // false
+// console.log(5 <= 5); // true
+// let temperature = 25;
+// console.log(temperature <= 30); // true
+
+//5. NOT EQUALTO !=
+// console.log(5 != 4); // true
+// console.log(5 != 5); // false
+// console.log(5 != "5"); // false (converts string to number)
+// let userInput = 10;
+// console.log(userInput != 0); // true
+
+//6. LOSELY EQUALTO ==
+// console.log(5 == 5); // true
+// console.log(5 == "5"); // true (string converted to number)
+// console.log(1 == true); // true (boolean converted to number)
+// console.log(0 == false); // true
+// let x = 10;
+// let y = "10";
+// console.log(x == y); // true (type conversion happens)
+
+//LOOSE EQUALITY == VS STRONG EQUALITY ===
+// console.log(5==5)
+// console.log("hi" == "hi"); // true
+// // Different types - converts before comparing
+// console.log(5 == "5"); // true (string "5" converted to number 5)
+// console.log(1 == true); // true (true converted to 1)
+// console.log(0 == false); // true (false converted to 0)
+// console.log("" == false); // true (both are "falsy")
+
+
+//STRING COMAPRASION
+//JavaScript can compare strings using comparison operators, but it uses Unicode (ASCII) values rather than
+// alphabetical order.
+// Single character comparisons
+// console.log('a' > 'A'); // true (97 > 65)
+// console.log('b' < 'c'); // true (98 < 99)
+// console.log('A' < 'a'); // true (65 < 97)
+// // String comparison
+// console.log("apple" < "banana"); // true (a < b)
+// console.log("cat" > "bat"); // true (c > b)
+
+//Character-by-Character Comparison
+//JavaScript compares strings from left to right:
+// console.log("apple" > "abstract")
+// console.log("hello" > "help"); // false
+
+// console.log("Apple" < "apple"); // true (A < a)
+// console.log("HELLO" < "hello"); // true (H < h)
