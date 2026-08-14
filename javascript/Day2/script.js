@@ -311,3 +311,9 @@
 
 // console.log("Apple" < "apple"); // true (A < a)
 // console.log("HELLO" < "hello"); // true (H < h)
+
+// Order: Numbers < Uppercase < Lowercase
+
+// console.log('9' < 'A'); // true (57 < 65)
+// console.log('Z' < 'a'); // true (90 < 97)
+// console.log('0' < 'a'); // true (48 < 97)
