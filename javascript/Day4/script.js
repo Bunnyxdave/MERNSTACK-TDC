@@ -79,3 +79,98 @@
 // let varName = "Hello World!"
 // console.log(varName.indexOf("W"))
 // console.log(varName.indexOf("e"))
+
+
+//example 2 finding a substring
+// let str="i hate javascript"
+// console.log(str.indexOf("hate"))
+// console.log(str.indexOf("script"))
+
+
+// Example 3: Character not found
+// let text = "Hello World";
+// console.log(text.indexOf("z")); // -1
+
+
+// Example 4: Case sensitivity
+// let word = "JavaScript";
+// console.log(word.indexOf("java")); // -1 (case matters!)
+// console.log(word.indexOf("Java")); // 0
+
+
+
+//METHOD CHAINING - WE CAN USE MULTIPLE METHODS IN A SINGLE INSTANCE UPON A VALUE OF THE VARIABLE
+
+// Example 1: Basic chaining
+// let msg = " hello ";
+// let result = msg.trim().toUpperCase();
+// console.log(result); // "HELLO"
+
+// EXAMPLE:2
+//  let msg="   hello   "
+// let newMsg=msg.trim().toUpperCase().slice(2,4)
+// console.log(newMsg)//LL
+
+// Example 3: Cleaning user input
+// let username = " UserName123 ";
+// let processed = username.trim().toLowerCase();
+// console.log(processed); // "username123"
+// // Example 4: Complex chaining
+// let text = " Hello World ";
+// let output = text.trim().toUpperCase().replace("HELLO", "HI");
+// console.log(output); // "HI WORLD"
+// // Example 5: Order matters in chaining
+// let word = "javascript";
+// console.log(word.slice(0, 4).toUpperCase()); // "JAVA"
+// console.log(word.toUpperCase().slice(0, 4)); // "JAVA" (same result)
+
+
+//SLICING STRINGS
+
+// Example 1: Basic slicing
+// let word = "Mountains";
+// console.log(word.slice(0, 5)); // "Mount"
+// console.log(word.slice(5)); // "ains"
+// // Example 2: Extracting middle portion
+// let text = "JavaScript";
+// console.log(text.slice(4, 10)); // "Script"
+// // Example 3: Slicing from an index to end
+// let message = "Hello World";
+// console.log(message.slice(6)); // "World"
+// // Example 4: Using negative indices (from end)
+// let lang = "JavaScript";
+// console.log(lang.slice(--6)); // "Script"
+// console.log(lang.slice(0, --6)); // "Java"
+// // Example 5: Getting first and last characters
+// let name = "Alexander";
+// console.log(name.slice(0, 1)); // "A" (first)
+// console.log(name.slice(--1)); // "r" (last)
+
+
+//REPLACING SUBSTRINGS
+
+// let message="i am muhammed burhanuddi, i live in hyderabad and i love buttercookies"
+
+// console.log(message.replace("love", "enjoy eating"))
+
+
+// Example 2: Only first occurrence is replaced
+// let text = "I love apple pie and apple juice";
+// console.log(text.replace("apple", "orange"));
+// // "I love orange pie and apple juice"
+// // Example 3: Case sensitivity
+// let message = "Hello hello HELLO";
+// console.log(message.replace("hello", "hi")); // "Hello hi HELLO"
+// // Example 4: Replacing spaces
+// let sentence = "Hello World";
+// console.log(sentence.replace(" ", "-")); // "Hello-World"
+// // Example 5: Chaining with replace
+// let str = " javascript ";
+// let result = str.trim().replace("java", "type");
+// console.log(result); // "typescript"
+
+
+//--------------ARRAYS-------------------------//
+
+//UNLIKE STRINGS ARRAYS ARE MUTABLE DATA-STRUCTURES . WE CAN PERFORM ALL CRUD OPERATIONS ON IT
+
