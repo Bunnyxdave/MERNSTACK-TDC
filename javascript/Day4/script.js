@@ -174,3 +174,35 @@
 
 //UNLIKE STRINGS ARRAYS ARE MUTABLE DATA-STRUCTURES . WE CAN PERFORM ALL CRUD OPERATIONS ON IT
 
+// let fruits=["apple", "banana", "mango", "Grapes", "kiwi"]
+//     console.log(fruits[3])
+//     fruits[3]="guvava"
+//     console.log(fruits[3])//updated
+
+
+// example2: modifying multiple elements
+// let numbers =[1,2,3,4,5,6,7,8,9]
+// numbers[5]=23
+// numbers[2]=44
+// numbers[1]=66
+// console.log(numbers)
+
+
+//example3: changing last element
+// let arr = [10,20,30,40,50]
+// console.log(arr)
+// arr[arr.length-1]=300
+// console.log(arr)
+
+
+// // Example 4: Arrays vs Strings mutability
+// let arr = ["a", "b", "c"];
+// arr[0] = "z"; // Works!
+// console.log(arr); // ["z", "b", "c"]
+
+// Example 5: Updating based on condition
+// let scores = [85, 90, 75, 88];
+// if (scores[2] < 80) {
+// scores[2] = 80; // Bump up the low score
+// }
+// console.log(scores); // [85, 90, 80, 88]
