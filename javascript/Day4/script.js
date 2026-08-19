@@ -206,3 +206,227 @@
 // scores[2] = 80; // Bump up the low score
 // }
 // console.log(scores); // [85, 90, 80, 88]
+
+//BASIC ARRAY METHIDS
+//.push(): use to add an element in the end of array 
+
+//example1:
+// let arr =["apple", "banana", "mango", "grapes"]
+// console.log(arr)
+// arr.push("guvava")
+// console.log(arr)
+
+
+// example2:
+// let num=[12,23,34,45,56,67,78]
+// console.log(num)
+// num.push("sigmoid")
+// console.log(num)
+
+
+//.pop() -- no need to pass the argument it simply removes the last element if the array
+
+//example1: 
+// let arr = ["red", "blue", "green", "yellow"]
+// console.log(arr)
+// arr.pop()
+// console.log(arr)
+
+// Example 2: Using pop() to remove from end
+// let colors = ["red", "green", "blue"];
+// let removed = colors.pop();
+// console.log(removed); // "blue"
+// console.log(colors); // ["red", "green"]
+
+
+//.unshift --  adds the element in the begining of the array 
+
+// exampl1:
+// let num =[1,2,3,4,5,6,7]
+// console.log(num)
+// num.unshift(77)
+// console.log(num)
+
+
+//example2:
+// let numbers = [2, 3, 4];
+// numbers.unshift(1);
+// console.log(numbers); // [1, 2, 3, 4]
+
+
+//.shift() -- removes the element from the begining of the aray 
+// example1
+// let words =["cat", "dog", "car", "fort"]
+// console.log(words)
+// words.shift()
+// console.log(words)
+
+
+// example2
+// let items =["first", "second", "third", "fourth"]
+// console.log(items)
+// items.shift()
+// console.log(items)
+
+
+//COMBINIING MULTIPLE OPERATIONSS
+// let stack = [1, 2, 3];
+// stack.push(4); // [1, 2, 3, 4]
+// stack.push(5); // [1, 2, 3, 4, 5]
+// stack.pop(); // [1, 2, 3, 4]
+// stack.unshift(0); // [0, 1, 2, 3, 4]
+// console.log(stack); // [0, 1, 2, 3, 4]
+
+
+
+//SEARCH AND MERGE METHODS 
+//.indexOf()
+
+//example1:
+// let cars =["toyota", "jeep", "kaiser", "oxford morris", "nissan"]
+// let indexOfCar= cars.indexOf("jeep")
+// console.log(indexOfCar)
+
+//example2:
+// let bikes=["harley", "ducati", "yezdi", "yamaha"]
+// console.log(bikes.indexOf("yezdi")) //2
+
+//example3:
+
+// let arr = ["red", "yellow", "black", "purple", "blue"]
+// let userInput = prompt("Enter the color you want to find:")
+// let indexOfArr = arr.indexOf(userInput)
+
+// if (indexOfArr === -1)
+// {
+//     alert("teh color is not available")
+// }
+// else {
+//     alert(`the color ${userInput} is found at: ${indexOfArr}`)
+// }
+
+
+
+
+//.includes() --- finds the value is present in the array or not ...returns the boolean value based on whether the value found is true or not 
+
+//example1:
+// let colors = ["red", "green", "blue"];
+// console.log(colors.includes("green")); // true
+// console.log(colors.includes("yellow")); // false
+
+
+//.reverse() ---- use to reverse the sequence of the array
+// let numbers = [1, 2, 3, 4, 5];
+// numbers.reverse();
+// console.log(numbers); // [5, 4, 3, 2, 1]
+
+// Example 5: Combining methods
+// let items = ["a", "b", "c"];
+// let moreItems = ["d", "e"];
+// let all = items.concat(moreItems);
+// console.log(all.includes("c")); // true
+// console.log(all.indexOf("d")); // 3
+
+
+//.slice() --- slice the elemnts of the arrays 
+// let arr = ["red", "yellow", "black", "purple", "blue"]
+// console.log(arr)
+// let newaArr = arr.slice(1,3)
+// console.log(newaArr)
+
+
+//.splice()
+//example1:
+// let months = ["Jan", "March", "April"];
+// console.log(months)
+// months.splice(1,0, "feb")
+// console.log(months)
+
+// Example 2: Removing elements
+// let colors = ["red", "green", "blue", "yellow"];
+// colors.splice(2, 1); // Remove 1 element at index 2
+// console.log(colors); // ["red", "green", "yellow"]
+
+// // Example 3: Replacing elements
+// let fruits = ["apple", "banana", "mango"];
+// fruits.splice(1, 1, "orange");
+// console.log(fruits); // ["apple", "orange", "mango"]
+
+// // Example 4: Removing and adding multiple elements
+// let numbers = [1, 2, 5, 6];
+// numbers.splice(2, 0, 3, 4); // Insert 3 and 4 at index 2
+// console.log(numbers); // [1, 2, 3, 4, 5, 6]
+
+// // Example 5: Removing multiple elements
+// let items = ["a", "b", "c", "d", "e"];
+// items.splice(1, 3); // Remove 3 elements starting at index 1
+// console.log(items); // ["a", "e"]
+
+//Array references 
+//When you assign an array to a variable, you're storing a reference (memory address) to that array, not the actual
+// values. This means two variables can point to the same array.
+
+// let num1 = [1,2,3,4]
+// let num2 = num1
+// num2.push(33)
+// console.log(num2)
+// console.log(num1)//(also changed!)
+
+
+// Example 3: Both variables point to same array
+// let colors = ["red", "green"];
+// let palette = colors;
+// palette.push("blue");
+// console.log(colors); 
+// console.log(palette); 
+
+// Example 4: Comparing references
+// let a = [1, 2, 3];
+// let b = a;
+// console.log(a === b); // true (same reference)
+// let c = [1, 2, 3];
+// console.log(a === c); // false (different references)
+
+
+//NESTED ARRAYS :
+// Arrays can contain other arrays as elements, creating multi-dimensional structures. These are useful for
+// representing grids, matrices, or tables.
+// Syntax: let grid = [[row1], [row2], [row3]];
+
+// let matrix = [[1,2,3],[1,2,3],[1,2,3]]
+// console.log(matrix[0][0])
+// console.log(matrix[0][1])
+// console.log(matrix[0][2])
+// console.log(matrix[1][0])
+// console.log(matrix[1][1])
+// console.log(matrix[1][2])
+
+
+// Example 2: Tic-tac-toe board
+// let board = [
+// ["X", "O", "X"],
+// ["O", "X", "O"],
+// ["O", "X", "X"]
+// ];
+// console.log(board[0][0]); // "X" (top-left)
+// console.log(board[2][2]); // "X" (bottom-right)
+
+// Example 3: Student grades
+// let grades = [
+// ["Alice", 85, 90, 92],
+// ["Bob", 78, 88, 84],
+// ["Charlie", 92, 95, 88]
+// ];
+// console.log(grades[0][0]); // "Alice"
+// console.log(grades[1][2]); // 88 (Bob's second grade)
+
+
+// Example 5: Complex nested structure
+// let data = [
+// [1, 2, 3],
+// [4, 5, 6],
+// [7, 8, 9]
+// ];
+// console.log(data[1][1]); // 5 (center element)
+// console.log(data[2][0]); // 7 (bottom-left)
