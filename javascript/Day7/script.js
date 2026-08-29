@@ -77,6 +77,12 @@
 // }
 
 
+//example problem function for converting celcius to farenheit
+// function tempurature(C){
+
+//     return (C*9/5) + 32
+
+// }
 
 
 //UNDERSTANDING THE SCOPE:
@@ -107,7 +113,84 @@
 
 //Block Scope: Variables declared with let or const inside curly braces {} cannot be accessed outside.
 
-//
+//if (true) {
+// let temp = 42;
+// console.log(temp); // Works: 42
+// }
+// console.log(temp); // Error: temp is not defined
+
+//Example 4: Block scope with loops
+// for (let i = 0; i < 3; i++) {
+// console.log(i); // 0, 1, 2
+// }
+// console.log(i); // Error: i is not defined
+
+
+// block scope with curly braces
+// {
+// let secret = "Hidden";
+// console.log(secret); // Works: Hidden
+// }
+// console.log(secret); // Error: secret is not defined
+
+
+//LEXICAL SCOPE
+
+//inner function accessing outer function
+// function outer() {
+// let x = 5;
+// function inner() {
+// console.log(x); // Inner can see 'x'
+// }
+// inner();
+// }
+// outer(); // Output: 5
 
 
 
+// Example 2: Multiple levels of nesting
+
+// function level1() {
+// let a = 10;
+// function level2() {
+// let b = 20;
+// function level3() {
+// console.log(a); 
+// console.log(b); 
+// }
+// level3();
+// }
+// level2();
+// }
+// level1();
+
+
+// Example 3: Outer cannot access inner variables
+
+// function outer() {
+// function inner() {
+// let secret = "Hidden";
+// }
+// inner();
+// console.log(secret); // Error: secret is not defined
+// }
+// outer();
+
+
+//example 4: 
+// function greet(name) {
+// function createMessage() {
+// return "Hello, " + name;
+// }
+// console.log(createMessage());
+// }
+// greet("Alice");
+
+// --------- FUNCTION EXPRESSION-------------
+
+// BASIC
+// const multiply = function(a, b) {
+// return a * b;
+// };
+// console.log(multiply(4, 5)); 
+// console.log(multiply(10, 3)); 
