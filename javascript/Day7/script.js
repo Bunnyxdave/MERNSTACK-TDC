@@ -195,7 +195,32 @@
 // console.log(multiply(4, 5)); 
 // console.log(multiply(10, 3)); 
 
+// let functionName = function(){
+//     for(let i= 1; i<=10; i++){
+//     console.log("hello burhan")
+// }
+// }
 
+// functionName()
+
+
+//example: password strength checker
+// let passwordChecker = function () {
+//     let pwd = prompt("Enter the password");
+
+//     if (
+//         pwd.length >= 8 &&
+//         /[A-Z]/.test(pwd) &&
+//         /[0-9]/.test(pwd) &&
+//         /[@!#$%^&*()]/.test(pwd)
+//     ) {
+//         alert("Password is strong");
+//     } else {
+//         alert("Nalla password hai, change kar 😄");
+//     }
+// };
+
+// passwordChecker();
 
 // Example 2: Function expression with greeting
 // const sayHi = function(name) {
