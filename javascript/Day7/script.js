@@ -194,3 +194,21 @@
 // };
 // console.log(multiply(4, 5)); 
 // console.log(multiply(10, 3)); 
+
+
+
+// Example 2: Function expression with greeting
+// const sayHi = function(name) {
+// console.log("Hi, " + name + "!");
+// };
+// sayHi("Tom"); 
+// sayHi("Sarah"); 
+
+// Example 3: arrow functions
+
+// const square = (num) => {
+// return num * num;
+// };
+// console.log(square(5)); // Output: 25
+// console.log(square(10)); // Output: 100
+
