@@ -237,3 +237,34 @@
 // console.log(square(5)); // Output: 25
 // console.log(square(10)); // Output: 100
 
+
+//---------------->ARROW FUNCTION---------------------
+
+// let greeting = (txt) =>{
+//     console.log("hello "+txt)
+// }
+
+// greeting("buhran")
+
+//addition arrow-function
+// let add =(a,b) => {
+//     let result =a+b
+//     return result
+// }
+
+// let result = add(23,34)
+// console.log(result)
+
+//---> even shorter version
+
+// let add = (a,b) => a+b
+
+// let result = add(90,0)
+//     console.log(result)
+
+// arrow function for multiplicatiom
+
+// let mul = (a,b) => a*b
+//     let product = console.log(mul(2,5))
+
+
