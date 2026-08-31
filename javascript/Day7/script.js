@@ -3,7 +3,7 @@
 //FUNCTIONS - functions are reusable block of codes that perform specific task
 // function definition and calling
 
-// example1: 
+// example1:
 // function sayHello(){
 //     console.log("Hello World")
 // }
@@ -23,14 +23,12 @@
 // }
 // introduction();
 
-
 //FUNCTIONS WITH ARGUMENTS:
 
 // function greet (username){
 //     alert("hello "+username)
 // }
 // greet("burhan")
-
 
 //example2: sum of two numbers:
 // function sumOfTwoNum (a, b){
@@ -51,8 +49,7 @@
 
 // avg(12, 13 , 1)
 
-
-//example4: 
+//example4:
 //Create personalized messages
 // function message(name, age, place){
 //     console.log("Hi! "+name,"you are " +age, "years old", "and you live in "+place  )
@@ -60,22 +57,20 @@
 
 // message("burhan", 22, "hyd")
 
-
 //example4: code after return never runs
 
 // function add(a, b){
 //     let result=a+b
 //     return result
-//     console.log(result) <--- didnt run 
+//     console.log(result) <--- didnt run
 // }
 
 //example5:
-//return-string 
+//return-string
 // function greeting(name){
 //     return "burhan" +name
 
 // }
-
 
 //example problem function for converting celcius to farenheit
 // function tempurature(C){
@@ -83,7 +78,6 @@
 //     return (C*9/5) + 32
 
 // }
-
 
 //UNDERSTANDING THE SCOPE:
 // Scope determines where variables can be accessed in your code. Think of it as privacy levels:
@@ -110,7 +104,6 @@
 //     console.log(x)
 // }
 
-
 //Block Scope: Variables declared with let or const inside curly braces {} cannot be accessed outside.
 
 //if (true) {
@@ -125,14 +118,12 @@
 // }
 // console.log(i); // Error: i is not defined
 
-
 // block scope with curly braces
 // {
 // let secret = "Hidden";
 // console.log(secret); // Works: Hidden
 // }
 // console.log(secret); // Error: secret is not defined
-
 
 //LEXICAL SCOPE
 
@@ -146,8 +137,6 @@
 // }
 // outer(); // Output: 5
 
-
-
 // Example 2: Multiple levels of nesting
 
 // function level1() {
@@ -155,15 +144,14 @@
 // function level2() {
 // let b = 20;
 // function level3() {
-// console.log(a); 
-// console.log(b); 
+// console.log(a);
+// console.log(b);
 // }
 // level3();
 // }
 // level2();
 // }
 // level1();
-
 
 // Example 3: Outer cannot access inner variables
 
@@ -176,8 +164,7 @@
 // }
 // outer();
 
-
-//example 4: 
+//example 4:
 // function greet(name) {
 // function createMessage() {
 // return "Hello, " + name;
@@ -192,8 +179,8 @@
 // const multiply = function(a, b) {
 // return a * b;
 // };
-// console.log(multiply(4, 5)); 
-// console.log(multiply(10, 3)); 
+// console.log(multiply(4, 5));
+// console.log(multiply(10, 3));
 
 // let functionName = function(){
 //     for(let i= 1; i<=10; i++){
@@ -202,7 +189,6 @@
 // }
 
 // functionName()
-
 
 //example: password strength checker
 // let passwordChecker = function () {
@@ -226,8 +212,8 @@
 // const sayHi = function(name) {
 // console.log("Hi, " + name + "!");
 // };
-// sayHi("Tom"); 
-// sayHi("Sarah"); 
+// sayHi("Tom");
+// sayHi("Sarah");
 
 // Example 3: arrow functions
 
@@ -236,7 +222,6 @@
 // };
 // console.log(square(5)); // Output: 25
 // console.log(square(10)); // Output: 100
-
 
 //---------------->ARROW FUNCTION---------------------
 
@@ -267,4 +252,28 @@
 // let mul = (a,b) => a*b
 //     let product = console.log(mul(2,5))
 
+//-----------HIGHER ORDER FUNCTIONS:
+// FUNCTIONS that accepts other fnctions as inputs, arguments or returns a functions called as higher order functions
+
+// example1:
+// let repeatTask = function (a) {
+//   for (let i = 1; i <= a; i++) {
+//     greeting();
+//   }
+// };
+
+// let greeting = function () {
+//   console.log("hello");
+// };
+
+// repeatTask(9)
+
+// example2:
+// function applyDiscount(price, discountFunc) {
+// return discountFunc(price);
+// }
+// const tenPercent = (price) => price * 0.9;
+// const twentyPercent = (price) => price * 0.8;
+// console.log(applyDiscount(100, tenPercent));
+// console.log(applyDiscount(100, twentyPercent)); 
 
