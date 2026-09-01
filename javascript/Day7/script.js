@@ -275,5 +275,48 @@
 // const tenPercent = (price) => price * 0.9;
 // const twentyPercent = (price) => price * 0.8;
 // console.log(applyDiscount(100, tenPercent));
-// console.log(applyDiscount(100, twentyPercent)); 
+// console.log(applyDiscount(100, twentyPercent));
+
+// example
+// function calculator(a,b,operation){
+//    return operation(a,b)
+// }
+
+// let add = (a,b) => a+b
+// let sub = (a,b) => a-b
+// let mul = (a,b) => a*b
+// let div =(a,b) => a/b
+
+// calculator(2,10,mul)
+
+//example
+// function func1(a,b,callback){
+//     callback(a,b)
+// }
+
+// function func2(name,age){
+//     console.log(`hi i am ${name} and i am ${age} years old`)
+// }
+
+// func1("burhan",34,func2)
+
+//example
+// function func1(arr, operation){
+//     for(let i=0;i<arr.length;i++){
+//         operation(arr[i])
+//     }
+// }
+
+// function doublingTheElement(a){
+//     console.log(a*2)
+// }
+
+// func1([1,2,3,4], doublingTheElement)
+// VM2031:8 2
+// VM2031:8 4
+// VM2031:8 6
+// VM2031:8 8
+
+// --------------METHODS-------------
+//FUNCTINS THAT ARE BUILT IN THE OBJECTS ARE CALLED METHODS
 
