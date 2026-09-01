@@ -78,5 +78,42 @@
 // Error = The artist slipping and falling
 // catch Block = The safety net that catches them, allowing the show to continue
 
+// example:1
+// console.log("program");
+// try {
+//   console.log(undefinedVariable); //this will throw a reference error
+// } catch (err) {
+//   console.log("there is something wrong with it");
+// }
+
+// console.log("program executed");
+
+// --------- TIMING EVENTS---------------
+// setTimeout --- executes the code once
+// setInterval --- repeats the executions with some time interavl
+
+//example1:
+
+// function greet(){
+//     console.log("hello world")
+// }
+// //setTimeout(callback, delay in Ms)
+// setTimeout(greet, 3000)
+
+// example:2
+// setTimeout( ()=>{console.log("hola amigo")}, 5000)
+
+// example3:
+// console.log("starting...")
+
+// setTimeout( ()=> {console.log("this begin in 4 sec..")}, 4000)
+
+// console.log("ends")
+
+//setInterval() runs a function repeatedly at specified intervals.
+
+//setInterval(callback, time in MS)
+
+// setInterval(()=>{console.log("hello bitch")}, 2000)
 
 
