@@ -88,6 +88,33 @@
 
 // console.log("program executed");
 
+// // example:
+// function divide(a, b) {
+//   try {
+//     if (b === 0) {
+//       throw new Error("cannot divide by zero"); //using throw keyword we can create our own error and throw it to the catch block 
+//     } else {
+//       let result = a / b;
+//       console.log(result);
+//     }
+//   } catch (err) {
+//     console.log("error occured: ", err.message);
+//   }
+// }
+
+
+//example:
+// function user_Age(age){
+//     try{
+//         if(age<0){
+//         throw "Age cannot be negetive"
+//             }else if(age>150){throw "buddha hai kya bkl"}
+//             console.log(age)
+//     }catch(err){
+//             console.log("error occured:", err)
+//     }
+// }
+
 // --------- TIMING EVENTS---------------
 // setTimeout --- executes the code once
 // setInterval --- repeats the executions with some time interavl
@@ -115,5 +142,3 @@
 //setInterval(callback, time in MS)
 
 // setInterval(()=>{console.log("hello bitch")}, 2000)
-
-
