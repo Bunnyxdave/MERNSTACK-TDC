@@ -107,13 +107,12 @@
 //   { name: "Laptop", price: 1000 },
 //   { name: "Phone", price: 500 },
 //   { name: "Tablet", price: 300 },
-// ]; 
+// ];
 // const updatedProducts = products.map((product) => ({
 //   ...product,
 //   inStock: true,
 // }));
 // console.log(updatedProducts);
-
 
 //------------.filter()------------
 
@@ -123,24 +122,59 @@
 //example1: filter even numbers
 // let numbers = [1, 2, 3, 4, 5, 6];
 // let evenNumbers = numbers.filter((num) => num % 2 === 0);
-// console.log(evenNumbers); // [2, 4, 6]      
-
+// console.log(evenNumbers); // [2, 4, 6]
 
 // example2: get odd numbers
 // let numbers = [1, 2, 3, 4, 5, 6];
 // let oddNumbers = numbers.filter((num) => num % 2 !== 0);
-// console.log(oddNumbers); // [1, 3, 5]        
+// console.log(oddNumbers); // [1, 3, 5]
 
 //example3: get passing grades
 // let grades = [85, 92, 78, 96, 88];
 // let passingGrades = grades.filter((grade) => grade >= 80);
-// console.log(passingGrades); // [85, 92, 96, 88]  
+// console.log(passingGrades); // [85, 92, 96, 88]
 
 //example4: filter adults from an array of objects
 // let people = [
-//   { name: "Alice", age: 25 },  
+//   { name: "Alice", age: 25 },
 //   { name: "Bob", age: 30 },
 //   { name: "Charlie", age: 35 }
 // ];
 // let adults = people.filter((person) => person.age >= 18);
-// console.log(adults); // [{ name: "Alice", age: 25 }, { name: "Bob", age: 30 }, { name: "Charlie", age: 35 }] 
+// console.log(adults); // [{ name: "Alice", age: 25 }, { name: "Bob", age: 30 }, { name: "Charlie", age: 35 }]
+
+//-------------------------------some and every method of arrays-------------
+
+// every method in array works return final boolean value and works on and operator priciple. It checks if all elements in an array satisfy a condition and returns true if they do, otherwise false.
+//example1: chech if all are adults
+// let people = [
+//   { name: "Alice", age: 25 },
+//   { name: "Bob", age: 30 },
+//   { name: "Charlie", age: 35 }
+// ];
+// let allAdults = people.every((person) => person.age >= 18);
+// console.log(allAdults); // true
+
+//example2: check if all numbers are positive
+// let numbers = [1, 2, 3, 4, 5];
+// let allPositive = numbers.every((num) => num > 0);
+// console.log(allPositive); // true
+
+//example3:check if all students passed
+// let students = [
+//   { name: "Alice", grade: 85 },
+//   { name: "Bob", grade: 92 },
+//   { name: "Charlie", grade: 78 }
+// ];
+// let allPassed = students.every((student) => student.grade >= 60);
+// console.log(allPassed); // true
+
+//example4: check if all numbers are even
+// let numbers = [2, 4, 6, 8, 10];
+// let allEven = numbers.every((num) => num % 2 === 0);
+// console.log(allEven); // true
+
+//example5: check if all strings have length greater than 3
+// let strings = ["apple", "banana", "cherry"];
+// let allLongerThanThree = strings.every((str) => str.length > 3);
+// console.log(allLongerThanThree); // true
