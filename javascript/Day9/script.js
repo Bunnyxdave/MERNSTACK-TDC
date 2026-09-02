@@ -113,3 +113,34 @@
 //   inStock: true,
 // }));
 // console.log(updatedProducts);
+
+
+//------------.filter()------------
+
+// filter creates a new array containing only the elements that pass a test (return true from the callback
+// function).
+
+//example1: filter even numbers
+// let numbers = [1, 2, 3, 4, 5, 6];
+// let evenNumbers = numbers.filter((num) => num % 2 === 0);
+// console.log(evenNumbers); // [2, 4, 6]      
+
+
+// example2: get odd numbers
+// let numbers = [1, 2, 3, 4, 5, 6];
+// let oddNumbers = numbers.filter((num) => num % 2 !== 0);
+// console.log(oddNumbers); // [1, 3, 5]        
+
+//example3: get passing grades
+// let grades = [85, 92, 78, 96, 88];
+// let passingGrades = grades.filter((grade) => grade >= 80);
+// console.log(passingGrades); // [85, 92, 96, 88]  
+
+//example4: filter adults from an array of objects
+// let people = [
+//   { name: "Alice", age: 25 },  
+//   { name: "Bob", age: 30 },
+//   { name: "Charlie", age: 35 }
+// ];
+// let adults = people.filter((person) => person.age >= 18);
+// console.log(adults); // [{ name: "Alice", age: 25 }, { name: "Bob", age: 30 }, { name: "Charlie", age: 35 }] 
