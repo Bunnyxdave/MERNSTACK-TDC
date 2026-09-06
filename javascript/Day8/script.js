@@ -53,6 +53,20 @@
 
 // bankAccount.deposite(2000); // Output: Deposited 2000. New balance is 8000.
 
+//example: using callback function
+// let balance =2000
+// let num=0
+// function bankAmountCheck(operation){
+//     return depositeAmount(num)
+// }
+
+// function depositeAmount(num){
+//     return balance+=num
+//     // console.log(balance)
+// }
+
+// console.log(balance)
+
 // example 5:
 // let cart = {
 //     items:["apple","banana", "mango"],
