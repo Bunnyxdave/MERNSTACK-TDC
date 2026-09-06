@@ -42,6 +42,22 @@
 // })
 // console.log(capitalarr)
 
+
+// example6:printing object properties
+// let employees=[
+//     {name:"aziz", age: 23,salary:55000},
+//     {name:"dogla pathan", age: 34,salary:155000},
+//     {name:"shakir mittha", age: 20,salary:5000},
+//     {name:"khuddi kumar", age: 21,salary:45000}
+// ]
+
+// employees.forEach((elem)=>{
+
+//     console.log(`hi ${elem.name}, you are ${elem.age} years old and your salary is ${elem.salary}`)
+   
+// }) 
+
+
 // ----------.map() method-------
 // map creates a new array by transforming each element. It "maps" each input to an output.
 
@@ -178,3 +194,5 @@
 // let strings = ["apple", "banana", "cherry"];
 // let allLongerThanThree = strings.every((str) => str.length > 3);
 // console.log(allLongerThanThree); // true
+
+
