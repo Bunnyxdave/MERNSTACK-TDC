@@ -42,7 +42,6 @@
 // })
 // console.log(capitalarr)
 
-
 // example6:printing object properties
 // let employees=[
 //     {name:"aziz", age: 23,salary:55000},
@@ -54,9 +53,73 @@
 // employees.forEach((elem)=>{
 
 //     console.log(`hi ${elem.name}, you are ${elem.age} years old and your salary is ${elem.salary}`)
-   
-// }) 
 
+// })
+
+//  Problem 3: Price Tag Filter (Advanced)Scenario: You run an e-commerce store and want to find items that qualify for "Luxury Pricing" (anything over $100). You also want to print out where they sit in your inventory.
+//  Task: Iterate through the prices array. If a price is greater than 100, push it into the luxuryPrices array. Simultaneously, print a message to the console for every item stating: "Item at index X costs $Y".
+
+// const prices = [45, 120, 85, 200, 15];
+// const luxuryPrices = [];
+
+// // Your code here
+// prices.forEach((elem) => {
+//     if (elem > 100){
+//         luxuryPrices.push(elem)
+//     }
+// })
+// console.log(luxuryPrices); // Expected output: [120, 200]
+// // Should also log 5 sentences to the console showing indices 0 through 4.
+
+// Problem 4: Email List Extractor (Warm-up)
+// Scenario: You have a list of user profile objects. You need to pull out just their email addresses to send a marketing newsletter.
+
+// const users = [
+//   { name: "Sam", email: "sam@example.com" },
+//   { name: "Alex", email: "alex@example.com" },
+//   { name: "Taylor", email: "taylor@example.com" }
+// ];
+
+// const emailList = [];
+
+// users.forEach((elem)=>{
+//     console.log(elem.email)
+// })
+
+// Problem 5: Inventory Restock Alert (Intermediate)
+// Scenario: You manage a grocery store inventory. You need to flag items that are running low (fewer than 5 units left) so you can reorder them
+
+// const inventory = [
+//   { item: "Apples", qty: 12, needsRestock: false },
+//   { item: "Bananas", qty: 2, needsRestock: false },
+//   { item: "Oranges", qty: 0, needsRestock: false },
+//   { item: "Milk", qty: 7, needsRestock: false }
+// ];
+
+// inventory.forEach((elem)=>{
+//     if(elem.qty<5){
+//         elem.needsRestock=true
+//         console.log(elem.item + ": only few items left")
+//     }
+// })
+
+// console.log(inventory)
+
+// Problem 6: The Alternating Operator (Advanced)
+// Scenario: You are building a math puzzle game. You need to process an array of numbers by adding the numbers at even indices and subtracting the numbers at odd indices.
+
+// const numbers = [10, 5, 20, 15, 30, 25];
+// let result = 0;
+
+// numbers.forEach((num, index) => {
+//   if (index % 2 === 0) {
+//     result += num; // Add numbers at even indices
+//   } else {
+//     result -= num; // Subtract numbers at odd indices
+//   }
+// });
+
+// console.log(result); // Expected output: 15
 
 // ----------.map() method-------
 // map creates a new array by transforming each element. It "maps" each input to an output.
@@ -194,5 +257,3 @@
 // let strings = ["apple", "banana", "cherry"];
 // let allLongerThanThree = strings.every((str) => str.length > 3);
 // console.log(allLongerThanThree); // true
-
-
