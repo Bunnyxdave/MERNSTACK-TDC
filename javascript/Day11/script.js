@@ -54,3 +54,37 @@
 //----------CLASSLIST - add, remove, toggle, contains
 
 //example1:
+// const heading = document.querySelector("#heading1")
+// heading.classList.add("mainHeading")
+
+// heading.classList.remove("mainHeading")
+
+// heading.classList.toggle("mainHeading") 
+
+// heading.classList.contains("mainHeading") //returns true or false
+
+
+//---------------NAVIGATION (DOM TRAVERSAL)
+
+//example1:
+// let box = document.querySelector(".box")
+// // console.dir(box)
+// let boxParent = box.parentElement
+// console.dir(boxParent)
+
+
+//example2:
+// const images = document.querySelectorAll("img")
+// images.forEach((image) => {
+//     console.log(image.getAttribute("class"))
+// })
+
+// let h4 = document.querySelector("h4")
+// const paraParent = h4.parentElement
+// console.log(paraParent.getAttribute("class"))
+
+//example3:
+const listElem = document.querySelector("li")
+console.dir(listElem)
+
+console.log(listElem.nextElementSibling)
