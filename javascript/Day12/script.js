@@ -41,3 +41,44 @@ document.body.insertAdjacentElement("afterbegin", btn)
 //     alert("just do it")
 // })
 
+//Multiple Listeners on Same Element
+// // First listener
+// btn.addEventListener("click", function() {
+// console.log("First action");
+// });
+// // Second listener (doesn't overwrite the first!)
+// btn.addEventListener("click", function() {
+// console.log("Second action");
+// });
+
+//lets make a counter
+// let count = 0
+// btn.addEventListener("click", ()=>{
+//     count++
+//     console.log("times you have clicked:", count)
+// })
+
+//lets make a toggle button functionality
+// 
+
+
+
+
+
+// 2. keyboard event listeners
+// 3. FORM nad inut events
+// 4. window prowser events
+
+
+//---------------this in eventlisteners--------------
+// here this (not in arrow function) refers tot the elemnt which triggered it.
+// as per the interpretetion of calling parent elemnt 
+
+// btn.addEventListener("mousedown", function(){
+//     this.style.backgroundColor="red"
+// })
+
+// btn.addEventListener("mouseup", function(){
+//     this.style.backgroundColor="olivedrab"
+// })
+
