@@ -50,7 +50,6 @@
 // head4.style.color = "red";
 // head4.style.display ="none"
 
-
 //----------CLASSLIST - add, remove, toggle, contains
 
 //example1:
@@ -59,10 +58,9 @@
 
 // heading.classList.remove("mainHeading")
 
-// heading.classList.toggle("mainHeading") 
+// heading.classList.toggle("mainHeading")
 
 // heading.classList.contains("mainHeading") //returns true or false
-
 
 //---------------NAVIGATION (DOM TRAVERSAL)
 
@@ -71,7 +69,6 @@
 // // console.dir(box)
 // let boxParent = box.parentElement
 // console.dir(boxParent)
-
 
 //example2:
 // const images = document.querySelectorAll("img")
@@ -84,7 +81,60 @@
 // console.log(paraParent.getAttribute("class"))
 
 //example3:
-const listElem = document.querySelector("li")
-console.dir(listElem)
+// const listElem = document.querySelector("li")
+// console.dir(listElem)
 
-console.log(listElem.nextElementSibling)
+// console.log(listElem.nextElementSibling)
+
+//example4:
+// const ul = document.querySelector("ul")
+// const ulparent = ul.parentElement
+
+// const ulsibling = ul.nextElementSibling;
+// console.dir(ulsibling)
+// ulsibling.style.border ="2px solid white"
+
+// ulparent.style.backgroundColor = "red"
+
+//--------creating and adding element
+
+//USING inserAdjacentElement() =>
+
+// const circle = document.createElement("div") //creating elemnt
+// circle.style.border ="2px solid white"
+// circle.style.width ="100px"
+// circle.style.height ="100px"
+// circle.style.borderRadius ="50%"
+// circle.style.backgroundColor= "skyblue"
+
+// document.body.insertAdjacentElement("beforeend", circle) //adding elemnt
+
+// lets break down the syntax of adding elemnt :
+// first -> where the elemnt is to be added? ==> here document.body
+// then use the method insertAdjacentElement("position", what elemnt is adding?)
+
+// positions :
+// beforeend,  afterend
+// beforebegin, afterbeign
+
+// appendChild(element) - Add to the END of parent
+// const circle = document.createElement("div"); //creating elemnt
+// circle.style.border = "2px solid white";
+// circle.style.width = "100px";
+// circle.style.height = "100px";
+// circle.style.borderRadius = "50%";
+// circle.style.backgroundColor = "skyblue";
+
+// let h1= document.querySelector("h1")
+// h1.appendChild(circle)
+
+//USING append()
+// append(element) - Modern version, add to END
+// const circle = document.createElement("div") //creating elemnt
+// circle.style.border ="2px solid white"
+// circle.style.width ="100px"
+// circle.style.height ="100px"
+// circle.style.borderRadius ="50%"
+// circle.style.backgroundColor= "skyblue"
+
+// document.body.append(circle)
