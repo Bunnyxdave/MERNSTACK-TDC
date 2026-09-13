@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Practice Playground</title>
+</head>
+<body>
+    <header id="page-header">
+        <h1 id="main-title">DOM Practice Playground</h1>
+        <p class="subtitle">Use JavaScript to select, read, change, and create elements.</p>
+    </header>
+
+    <main>
+        <section id="controls-section" class="panel">
+            <h2>Controls</h2>
+            <button id="change-title-btn" type="button">Change title</button>
+            <button id="toggle-theme-btn" type="button">Toggle theme</button>
+            <button class="action-btn" type="button">Inspect me</button>
+        </section>
+
+        <section id="profile-card" class="panel" data-user-role="student">
+            <h2>Profile Card</h2>
+            <img id="profile-image" src="https://placehold.co/120x120" alt="Placeholder profile" width="120" height="120">
+            <h3 id="profile-name">Alex Student</h3>
+            <p id="profile-bio">Learning how JavaScript interacts with HTML.</p>
+            <a id="profile-link" href="https://developer.mozilla.org/" target="_blank">Visit MDN</a>
+        </section>
+
+        <section id="tasks-section" class="panel">
+            <h2>Task List</h2>
+            <ul id="task-list">
+                <li class="task-item">Select an element</li>
+                <li class="task-item">Change its text</li>
+                <li class="task-item">Add a new item</li>
+            </ul>
+            <button id="add-task-btn" type="button">Add task</button>
+        </section>
+
+        <section id="form-section" class="panel">
+            <h2>Practice Form</h2>
+            <form id="practice-form">
+                <label for="name-input">Your name</label>
+                <input id="name-input" name="name" type="text" placeholder="Enter your name">
+
+                <label for="color-input">Favorite color</label>
+                <input id="color-input" name="color" type="color" value="#2563eb">
+
+                <label for="topic-select">Topic</label>
+                <select id="topic-select" name="topic">
+                    <option value="selectors">Selectors</option>
+                    <option value="events">Events</option>
+                    <option value="styles">Styles</option>
+                </select>
+
+                <label class="checkbox-label">
+                    <input id="ready-checkbox" name="ready" type="checkbox">
+                    I am ready to practice
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="form-message" aria-live="polite">Form output will appear here.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
