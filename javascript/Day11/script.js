@@ -138,3 +138,35 @@
 // circle.style.backgroundColor= "skyblue"
 
 // document.body.append(circle)
+
+// //using prepend()
+// let icon = document.createElement('span');
+// icon.innerText = "🌍 ";
+// let heading = document.querySelector('h1');
+// heading.prepend(icon)
+// // Icon appears inside h1, at the start
+
+//-----------REMOVING ELEMENT------------
+// let icon = document.createElement('span');
+// icon.innerText = "🌍 ";
+// let heading = document.querySelector('h1');
+// heading.prepend(icon)
+// // Icon appears inside h1, at the start
+
+// icon.remove() // ELEMNT REMOVED
+
+// let maincomp =document.querySelectorAll("ul")
+// ul_li=maincomp[1].children[1]
+// ul_li.innerText ="bunnyxdave is the best"
+
+// ul_li.remove()
+
+// to remove children elemnt 
+// parent.removeChild(child) - Removes a specific child (Old way)
+
+
+// let imageContainer = document.querySelector('.images');
+// let oldImg = document.querySelector('.oldImg');
+// imageContainer.removeChild(oldImg);
+
+
