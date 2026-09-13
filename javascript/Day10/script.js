@@ -45,3 +45,49 @@
 
 // let input = document.getElementsByTagName("input")
 // console.dir(input)
+
+//----Query selector - the swiss army knife----------
+//can take input as classname id tagname all in one
+// will only retrive the first element whn called for multiple elemts under ssinglename
+
+// let heading = document.querySelector("h1")
+// console.dir(heading)
+
+//---when selecting by a classname use ' . ' similar to as css
+// let _item =document.querySelector(".task-item")
+// console.dir(_item)
+// it returns only single and first element from the class list of items
+
+//----when selecting an element using id then use '#'
+// let title =document.querySelector("#main-title")
+// console.dir(title)
+
+// let elem = document.querySelector("#toggle-theme-btn")
+// console.dir(elem)
+
+//-- to select all elemnts under a single classname or tagname we have queryselctorall
+
+// let head_list = document.querySelectorAll("h2")
+// console.dir(head_list)
+
+// let _item =document.querySelectorAll(".task-item")
+// console.dir(_item)
+
+
+//-----------INNER HTML, INNER TEXT, TEXT CONTENT---------------
+//we can also manupilate the inner properties of the dom objects 
+
+
+// let heading = document.querySelector("h1")
+// heading.innerText=" boom shakalaka"
+
+// let subhead = document.querySelectorAll("h2")
+// subhead.forEach((elem)=>{
+//     elem.innerText="burhan"
+// })
+
+// similarly we can also use ionner html to get the text data oriented as per the html file
+//they differ significantly in how they handle HTML tags, hidden text, and performance
+// let para = document.querySelector("p")
+// para.innerHTML = "bunnyxdave"
+
