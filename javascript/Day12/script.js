@@ -6,10 +6,10 @@
 //example1:
 
 //creating an elemnt:
-const btn = document.createElement("button")
-btn.classList.add("signin-btn")
-btn.innerText="SIGN-IN"
-document.body.insertAdjacentElement("afterbegin", btn)
+// const btn = document.createElement("button")
+// btn.classList.add("signin-btn")
+// btn.innerText="SIGN-IN"
+// document.body.insertAdjacentElement("afterbegin", btn)
 
 // adding eventlistener:
 // btn.addEventListener("click", ()=>{
@@ -60,8 +60,32 @@ document.body.insertAdjacentElement("afterbegin", btn)
 
 //lets make a toggle button functionality
 // 
+// const btn = document.createElement("button")
+// btn.classList.add("signin-btn")
+// btn.innerText="SIGN-IN"
+// document.body.insertAdjacentElement("afterbegin", btn)
 
+// btn.addEventListener("click", ()=>{
+//     if( btn.innerText === "SIGN-IN"){
+//         btn.innerText = "SIGN-OUT"
+//         btn.style.backgroundColor ="red"
+//     }
+//     else if(btn.innerText === "SIGN-OUT"){
+//         btn.innerText = "SIGN-IN"
+//         btn.style.backgroundColor ="olivedrab"
+//     }
+// })
 
+//Interactive card hover 
+// let card = document.createElement("div")
+// card.classList.add("card")
+// document.body.insertAdjacentElement("beforeend", card)
+
+// function liftUp(){
+//     card.classList.add("card:hover")
+// }
+
+// card.addEventListener("mouseenter", liftUp())
 
 
 

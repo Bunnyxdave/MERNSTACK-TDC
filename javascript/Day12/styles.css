@@ -11,3 +11,17 @@
 }
 
 
+.card{
+    height:250px;
+    width:150px;
+    border: 15px solid black;
+    box-shadow: 0px 10px 20px rgba(108, 107, 107, 0.885);
+    border-radius : 20px;
+     transition: transform 0.4s ease-in-out; 
+}
+
+/* 2. Define the target state on hover */
+.card:hover {
+  /* Scale up by 20% and rotate 45 degrees */
+  transform: scale(1.2); 
+}
