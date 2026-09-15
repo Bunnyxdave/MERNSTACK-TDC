@@ -118,7 +118,7 @@
 // function green() {
 //   setTimeout(() => {
 //     h1.style.backgroundColor = "green";
-    
+
 //   }, 1000);
 // }
 
@@ -137,7 +137,6 @@
 //   });
 // });
 
-
 //or simplified version:
 // function changeColor(color, delay, callback) {
 //   setTimeout(() => {
@@ -155,4 +154,58 @@
 //   });
 // });
 
+// / Example 5: fetchStudentData function and printStudentData function (lab work)
+// function fetchData(callback){
+//     console.log("sending request to db")
+//     setTimeout(() => {
+//        console.log( "received.")
+//         callback()
+//     }, 3000);
+// }
 
+// function printData(){
+//     console.log("name: burhan\n class: x\n school: NSAHS")
+// }
+
+// fetchData(()=>{
+//     printData()
+// })
+
+// Example 6: Register → Send Email → Update Database → Send Welcome SMS (lab work)
+
+// function registration(callback) {
+//     let delay = Math.floor(Math.random())
+//   console.log("processing the registration...");
+//   setTimeout(() => {
+//     console.log("registeration completed");
+//     callback();
+//   }, 1500);
+// }
+
+// function sendEmail(callback) {
+//   console.log("sending email");
+//   setTimeout(() => {
+//     console.log("email sent!");
+//     callback();
+//   }, 2000);
+// }
+
+// function updateDatabase(callback) {
+//   console.log("updating db");
+//   setTimeout(() => {
+//     console.log("updated database!");
+//     callback();
+//   }, 1000);
+// }
+
+// function welcome() {
+//   console.log("Welcome to the service!");
+// }
+
+// registration(() => {
+//   sendEmail(() => {
+//     updateDatabase(() => {
+//       welcome();
+//     });
+//   });
+// });
