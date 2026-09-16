@@ -209,3 +209,144 @@
 //     });
 //   });
 // });
+
+// here another probelm is introduced that is callback hell
+
+// in order to solve it Promises are used
+//---------------------------------------PROMISE--------------------------------------------
+// promise is an advanced object representing the eventual completeion (or failure of the promises)
+// 2 steps involved in implementing promisification
+//      1- promise creation
+//      2- promise consumption
+
+// Promise States
+// Every Promise is in one of three states:
+// 1. Pending: Initial state, operation is ongoing
+// 2. Fulfilled (Resolved): Operation completed successfully
+// 3. Rejected: Operation failed
+
+// example1:
+// creating a promise
+// const promise = new Promise((resolve, reject) => {
+//   console.log("Starting the program...");
+
+//   setTimeout(() => {
+//     console.log("Step 1 completed.");
+
+//     const success = Math.random() >= 0.5;
+
+//     if (success) {
+//       resolve("Step 2 completed");
+//     } else {
+//       reject("Step 2 failed");
+//     }
+//   }, 2000);
+// });
+
+// promise
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// example:1
+
+//-------PROMISE CREATED
+
+// function saveMsg1() {
+//   return new Promise((resolve, reject) => {
+//     console.log("starting to save message 1 ");
+//     isDbavailable = Math.floor(Math.random() * 2);
+
+//     setTimeout(() => {
+//       if (isDbavailable) {
+//         resolve("saved msg 1 to db", isDbavailable);
+//       } else {
+//         reject(
+//           "db is unavailable. failed to save msg ", isDbavailable
+//         );
+//       }
+//     }, 1500);
+//   });
+// }
+
+// function saveMsg2() {
+//   return new Promise((resolve, reject) => {
+//     console.log("starting to save message 2 ");
+//     isDbavailable = Math.floor(Math.random() * 2);
+
+//     setTimeout(() => {
+//       if (isDbavailable) {
+//         resolve("saved msg 2 to db", isDbavailable);
+//       } else {
+//         reject(
+//           "db is unavailable. failed to save msg ", isDbavailable
+//         );
+//       }
+//     }, 1500);
+//   });
+// }
+
+// function saveMsg3() {
+//   return new Promise((resolve, reject) => {
+//     console.log("starting to save message 3 ");
+//     isDbavailable = Math.floor(Math.random() * 2);
+
+//     setTimeout(() => {
+//       if (isDbavailable) {
+//         resolve("saved msg 3 to db", isDbavailable);
+//       } else {
+//         reject(
+//           "db is unavailable. failed to save msg ", isDbavailable
+//         );
+//       }
+//     }, 1500);
+//   });
+// }
+
+//-------------PROMISE CONSUMING
+
+// saveMsg1()
+//   .then(() => {
+//     console.log("task 1 completed");
+
+//     saveMsg2()
+//       .then(() => {
+//         console.log("task 2 completed");
+//         saveMsg3()
+//           .then(() => {
+//             console.log("task 3 completed");
+//           })
+//           .catch(() => {
+//             console.log("task 3 failed");
+//           });
+//       })
+//       .catch(() => {
+//         console.log("task 2 failed");
+//       });
+//   })
+//   .catch(() => {
+//     console.log("task 1 failed");
+//   });
+
+  //promise chaining----
+
+//   saveMsg1()
+//   .then((abc)=>{
+//    console.log(abc, "//task 1 completed")
+//    return saveMsg2()
+//   })
+//   .then((abc2)=>{
+//    console.log(abc2,"//task 2 is completed")
+//    return saveMsg3()
+//   })
+//   .then((abc3)=>{
+//    console.log(abc3, "//task 3 completed")
+//    setTimeout(()=>{
+//       console.log("all messages are saved")
+//    },2000)
+//   }).catch((rej)=>{
+//    console.log(rej, "//failed to complete the task")
+//   })
