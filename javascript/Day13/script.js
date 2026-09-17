@@ -331,7 +331,7 @@
 //     console.log("task 1 failed");
 //   });
 
-  //promise chaining----
+//promise chaining----
 
 //   saveMsg1()
 //   .then((abc)=>{
@@ -350,3 +350,49 @@
 //   }).catch((rej)=>{
 //    console.log(rej, "//failed to complete the task")
 //   })
+
+// example2: (difficulty level hard)
+
+const existingHeading = document.querySelector("h1");
+if (existingHeading) {
+  existingHeading.remove();
+}
+
+const heading = document.createElement("h1");
+heading.textContent = "Grid:";
+document.body.prepend(heading);
+
+function grid() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      try {
+        const colors = ["_1", "_2", "_3", "_4", "_5", "_6", "_7"];
+        const fragment = document.createDocumentFragment();
+
+        for (let i = 0; i < 6; i++) {
+          const box = document.createElement("div");
+          box.classList.add("box", colors[i % colors.length]);
+
+          const para = document.createElement("p");
+          para.textContent = `box no.${i + 1}`;
+
+          fragment.appendChild(para);
+          fragment.appendChild(box);
+        }
+
+        document.body.appendChild(fragment);
+        resolve("machine started");
+      } catch (error) {
+        reject("machine finished the work...");
+      }
+    }, 2000);
+  });
+}
+
+grid()
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
