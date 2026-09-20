@@ -31,86 +31,65 @@
 //     setTimeout(() => {
 //       if (isDbavailable) {
 //         resolve("completed task 1");
-//       } else {
-//         reject("db is unavailable");
-//       }
-//     }, delay * 1000);
-//   });
-// }
+function registration(username) {
+	const registeredUsers = ["armaan", "Malik", "sajjad", "Ali", "Muqtaar"];
 
-// function task2() {
-//   return new Promise((resolve, reject) => {
-//     let delay = Math.floor(Math.random() * 3);
-//     let isDbavailable = Math.floor(Math.random() * 2);
-//     console.log("starting task 2...");
-//     setTimeout(() => {
-//       if (isDbavailable) {
-//         resolve("completed task 2");
-//       } else {
-//         reject("db is unavailable");
-//       }
-//     }, delay * 1000);
-//   });
-// }
+	if (registeredUsers.includes(username)) {
+		throw new Error("user is already registered");
+	}
 
-// function task3() {
-//   return new Promise((resolve, reject) => {
-//     let delay = Math.floor(Math.random() * 3);
-//     let isDbavailable = Math.floor(Math.random() * 2);
-//     console.log("starting task 3...");
-//     setTimeout(() => {
-//       if (isDbavailable) {
-//         resolve("completed task 3");
-//       } else {
-//         reject("db is unavailable");
-//       }
-//     }, delay * 1000);
-//   });
-// }
+	console.log("user is not registered, continuing...");
+	registeredUsers.push(username);
+	return username;
+}
 
-// async function runningTask() {
-//   console.log("running all tasks");
-//   try {
-//     let response1 = await task1();
-//     console.log(response1);
+function verifyingEmail() {
+	return new Promise((resolve) => {
+		const delay = Math.floor(Math.random() * 4);
+		console.log("registration started...");
+		setTimeout(() => resolve("verifying email..."), delay * 1000);
+	});
+}
 
-//     let response2 = await task2();
-//     console.log(response2);
+function auth() {
+	return new Promise((resolve) => {
+		const delay = Math.floor(Math.random() * 4);
+		setTimeout(() => resolve("authenticating..."), delay * 1000);
+	});
+}
 
-//     let response3 = await task3();
-//     console.log(response3);
+function add() {
+	return new Promise((resolve) => {
+		const delay = Math.floor(Math.random() * 4);
+		setTimeout(() => resolve("adding user to db..."), delay * 1000);
+	});
+}
 
-//     console.log("all tasks completed");
-//   } catch (rejectMsg) {
-//     console.log(rejectMsg);
-//   }
-// }
+function addSuccess() {
+	return new Promise((resolve) => {
+		const delay = Math.floor(Math.random() * 4);
+		setTimeout(() => resolve("user added successfully..."), delay * 1000);
+	});
+}
 
-// runningTask();
+function welcome(username) {
+	return Promise.resolve(`welcome, ${username}!`);
+}
 
-//-------------ASYNC-------------
-//Async functions with Errors
+async function flow(user) {
+	try {
+		const newUser = registration(user);
+		console.log(await verifyingEmail());
+		console.log(await auth());
+		console.log(await add());
+		console.log(await addSuccess());
+		console.log(await welcome(newUser));
+	} catch (error) {
+		console.log(error.message);
+	}
+}
 
-// async function divide(a,b){
-//     if(b === 0){
-//         throw new Error("Cannot Divide by Zero")
-//     }
-//     else {
-//         return a/b
-//     }
-
-// }
-
-// divide(10,2)
-//     .then(result => console.log('result', result))
-//     .catch( error => console.log("error",error.message))
-
-//     divide(0,0)
-
-//------AWAIT-------------
-
-//What Does await Do?
-// The await keyword literally "pauses" the execution of an async function until a Promise is settled (either
+flow("Hassan");
 // resolved or rejected). It can ONLY be used inside an async function.
 
 // example1:
@@ -158,4 +137,92 @@
 // }
 
 // displayData();
+
+//example 2: registration form
+
+// function registration(username) {
+//   let registeredUsers = ["armaan", "Malik", "sajjad", "Ali", "Muqtaar"];
+
+//   if (registeredUsers.includes(username)) {
+//     throw new Error("user is already registered");
+//   } else {
+//     console.log("user is not registered, continuing...");
+//   }
+
+//   let newUser = username;
+//   registeredUsers.push(newUser);
+//   return newUser;
+// }
+
+// function verifyingEmail() {
+//   return new Promise((resolve) => {
+//     let delay = Math.floor(Math.random() * 4);
+//     console.log("registration started...");
+//     setTimeout(() => {
+//       //---timeout
+//       resolve("verifying email...");
+//     }, delay * 1000);
+//   });
+// }
+ 
+
+// function auth() {
+//   return new Promise((resolve) => {
+//     let delay = Math.floor(Math.random() * 4);
+
+//     setTimeout(() => {
+//       //---timeout
+//       resolve("authenticating...");
+//     }, delay * 1000);
+//   });
+// }
+
+// function add() {
+//   return new Promise((resolve) => {
+//     let delay = Math.floor(Math.random() * 4);
+
+//     setTimeout(() => {
+//       //---timeout
+//       resolve("adding user to db...");
+//     }, delay * 1000);
+//   });
+// }
+
+// function addSuccess() {
+//   return new Promise((resolve) => {
+//     let delay = Math.floor(Math.random() * 4);
+
+//     setTimeout(() => {
+//       //---timeout
+//       resolve("user added successfully...");
+//     }, delay * 1000);
+//   });
+// }
+
+// function welcome(username) {
+//   return new Promise((resolve) => {
+//     resolve(`welcome, ${username}!`);
+//   });
+// }
+
+// async function flow(user){
+//     try{
+//     const newUser = registration(user);
+//     console.log(await verifyingEmail());
+//     console.log(await auth());
+//     console.log(await add());
+//     console.log(await addSuccess());
+//     console.log(await welcome(newUser));
+//     }
+//     catch(error){
+//         console.log(error.message);
+//     }
+// }
+
+// flow("Hassan");
+
+
+
+
+
 
