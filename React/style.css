@@ -1,0 +1,24 @@
+/* #root{
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+} */
+
+#box1{
+    width:400px;
+    height: 400px;
+    background-color:bisque;
+    justify-content: center;
+    text-align: center;  
+    display: flex; 
+    
+}
+
+#box2{
+    width:100px;
+    height: 100px;
+    background-color:brown;
+    justify-content: center;
+    text-align: center;   
+    
+}
